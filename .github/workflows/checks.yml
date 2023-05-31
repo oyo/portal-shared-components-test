@@ -50,7 +50,7 @@ jobs:
           echo npm ${{ steps.npm-version.outputs.current-version }}
 
       - name: Versions not matching
-        if: env.GIT_VERSION == steps.npm-tag.outputs.current-version
+        if: env.GIT_VERSION == steps.npm-version.outputs.current-version
         run: |
           echo git tag for npm versions exists - please run `yarn version --patch` and update PR
           exit 1
