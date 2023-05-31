@@ -24,11 +24,9 @@ name: release
 on:
   push:
     branch: "main"
-#    tags:
-#      - 'v*.*.*'
 
 jobs:
-  build-and-publish-release:
+  build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
