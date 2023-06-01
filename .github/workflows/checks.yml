@@ -49,7 +49,7 @@ jobs:
           echo git ${{ env.GIT_VERSION }}
           echo npm ${{ steps.npm-version.outputs.current-version }}
 
-      - name: Tag already exists
+      - name: Check if tag already exists
         if: env.GIT_VERSION == steps.npm-version.outputs.current-version
         run: |
           echo git tag for npm versions exists - please run `yarn version --patch` and update PR
