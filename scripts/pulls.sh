@@ -41,21 +41,40 @@ list-pulls() {
 
 create-pull() {
     CC=$1
+    DESC=$2
+    WHY=$3
+    ISSUE=$4
+    read -r -d '' RAW_BODY << EOM
+Description
+$DESC
+
+Why
+$WHY
+
+Issue
+$ISSUE
+
+Checklist
+[x] I have followed the contributing guidelines
+[x] I have performed a self-review of my own code
+[x] I have successfully tested my changes locally
+EOM
+    BODY=$(echo $RAW_BODY | sed -z 's/\n/\\n/g')
     curl -L \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
         -H "X-GitHub-Api-Version: 2022-11-28" \
         https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls \
-        -d '{"title":"'$CC'","body":"tbd","head":"'$REPO_OWNER':'$CC'","base":"main"}'
+        -d '{"title":"'$CC'","body":"'$BODY'","head":"'$REPO_OWNER':'$CC'","base":"main"}'
 }
 
-deploy() {
+commit-push-raise() {
     CC=$1
     yarn version --patch
     git checkout -b $CC
     git add -A
     git commit -m $CC
     git push origin $CC
-    create-pull $CC
+    create-pull $@
 }
