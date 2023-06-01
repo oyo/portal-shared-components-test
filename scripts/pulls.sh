@@ -95,5 +95,5 @@ EOM
     git add -A
     git commit -m $CC
     git push origin $BRANCH
-    create-pull $@
+    create-pull $@ | jq '.url'
 }
