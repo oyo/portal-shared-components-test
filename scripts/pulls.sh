@@ -44,14 +44,7 @@ create-pull() {
     DESC=$2
     WHY=$3
     ISSUE=$4
-    curl -L \
-        -X POST \
-        -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer $GITHUB_TOKEN"\
-        -H "X-GitHub-Api-Version: 2022-11-28" \
-        https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls \
-        -d '{"title":"'$CC'","body":"'
-$(cat << EOM
+    read -r -d '' BODY << EOM
 Description
 $DESC
 
@@ -66,8 +59,13 @@ Checklist
 [x] I have performed a self-review of my own code
 [x] I have successfully tested my changes locally
 EOM
-)
-            '","head":"'$REPO_OWNER':'$CC'","base":"main"}'
+    curl -L \
+        -X POST \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer $GITHUB_TOKEN"\
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls \
+        -d '{"title":"'$CC'","body":"'$BODY'","head":"'$REPO_OWNER':'$CC'","base":"main"}'
 }
 
 commit-push-raise() {
