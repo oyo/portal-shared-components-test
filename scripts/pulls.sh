@@ -23,7 +23,6 @@
 # Bash utils for GitHub API
 #
 # prerequisites:
-#   - curl installed
 #   - GITHUB_TOKEN enviroment variable set to token with repo scope
 #
 
@@ -44,7 +43,7 @@ create-pull() {
     BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
     DESC=$2
     WHY=$3
-    ISSUE=$4
+    ISSUE=${4:-'n/a'}
     read -r -d '' RAW_BODY << EOM
 ## Description
 $DESC
@@ -56,12 +55,12 @@ $WHY
 $ISSUE
 
 ## Checklist
-- [x] I have followed the contributing guidelines
+- [x] I have followed the [contributing guidelines](https://github.com/eclipse-tractusx/portal-assets/blob/main/developer/Technical%20Documentation/Dev%20Process/How%20to%20contribute.md#commit-and-pr-guidelines)
 - [x] I have performed a self-review of my own code
 - [x] I have successfully tested my changes locally
 EOM
     BODY=$(echo $RAW_BODY | sed -z 's/\n/\\n/g')
-    curl -L \
+    echo curl -L \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
@@ -70,20 +69,30 @@ EOM
         -d '{"title":"'$CC'","body":"'$BODY'","head":"'$REPO_OWNER':'$BRANCH'","base":"main"}'
 }
 
-vbacpr() {
-    if [[ $# -ne 4 ]]; then
+next-release() {
+    if [[ $# -ne 3 && $# -ne 4 ]]; then
       cat >&2 << EOM
-vbacpr - version + branch + add + commit + push + raise
+next-release - performs all steps for new release
+
+CAUTION - USE THIS ONLY IF YOU ARE SURE YOU WANT TO:
+    - increment version patchlevel
+    - upgrade all packages and DEPENDENCIES file
+    - create a new branch
+    - add, commit and push ALL files
+    - raise PR
+
+prerequisites:
+    - set environment variable GITHUB_TOKEN to valid token with repo scope
 
 usage:
-    vbacpr <title> <desc> <why> <issue>
+    next-release <title> <desc> <why> [<issue>]
 
 example:
-    vbacpr \\
+    export GITHUB_TOKEN=ghp_*****
+    next-release \\
         'feat(cli): amazing pull request cli' \\
         'CLI for pull requests' \\
-        'now it takes only one command to raise pr' \\
-        'n/a'
+        'now it takes only one command to raise pr'
 
 EOM
       return -1
@@ -91,9 +100,12 @@ EOM
     CC=$1
     BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
     yarn version --patch
+    yarn upgrade
+    yarn licenses list > DEPENDENCIES
     git checkout -b $BRANCH
     git add -A
     git commit -m $CC
     git push origin $BRANCH
-    create-pull $@ | jq '.url'
+    echo '.'
+    create-pull $@ | jq '.html_url'
 }
