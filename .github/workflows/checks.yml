@@ -56,8 +56,7 @@ jobs:
           exit 1
 
       - name: Tag available
-        run: |
-          echo versions not equal - running checks
+        run: echo versions not equal - running checks
 
       - name: Install Dependencies
         run: yarn
