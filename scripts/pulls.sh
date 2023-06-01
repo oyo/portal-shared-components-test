@@ -76,5 +76,5 @@ commit-push-raise() {
     git add -A
     git commit -m $CC
     git push origin $CC
-    create-pull $CC
+    create-pull $@
 }
