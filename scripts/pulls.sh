@@ -44,7 +44,7 @@ create-pull() {
     DESC=$2
     WHY=$3
     ISSUE=$4
-    read -r -d '' BODY << EOM
+    read -r -d '' RAW_BODY << EOM
 Description
 $DESC
 
@@ -59,7 +59,8 @@ Checklist
 [x] I have performed a self-review of my own code
 [x] I have successfully tested my changes locally
 EOM
-    curl -L \
+    BODY=$(echo $RAW_BODY | sed -z 's/\n/\\n/g')
+    echo curl -L \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
