@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components-test",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -79,6 +79,7 @@
     "build:lib": "echo DEPRECATED - use \"yarn build\" && yarn build",
     "start:storybook": "echo DEPRECATED - use \"yarn start\" && yarn start",
     "build:storybook": "storybook build",
+    "build:sources": "zip -r portal-shared-components.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.css' -x '*.scss' -x '*.svg' -x '*.jpg' -x '*.png' -x '*.ttf'",
     "pretty": "prettier --write \"./src/**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\" \"./*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "lint": "yarn run eslint \"./src/**/*.{ts,tsx}\"",
     "test": "jest",
