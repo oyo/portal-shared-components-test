@@ -29,7 +29,7 @@ export REPO_OWNER=oyo
 export REPO_NAME=portal-shared-components-test
 
 list-pulls() {
-    curl -L \
+    curl -sL \
         -X GET \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
@@ -59,7 +59,7 @@ $ISSUE
 - [x] I have successfully tested my changes locally
 EOM
     BODY=$(echo $RAW_BODY | sed -z 's/\n/\\n/g')
-    curl -L \
+    curl -sL \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
