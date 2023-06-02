@@ -39,7 +39,7 @@ list-pulls() {
 
 create-pull-request() {
     CC=$1
-    BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
+    BRANCH=$(echo $CC | awk '{gsub(/[^a-zA-Z0-9_]+/,"-");}1')
     DESC=$2
     WHY=$3
     ISSUE=${4:-'n/a'}
@@ -114,7 +114,7 @@ EOM
         fi
     fi
     CC=$1
-    BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
+    BRANCH=$(echo $CC | awk '{gsub(/[^a-zA-Z0-9_]+/,"-");}1')
     PR_ARGS=$(for arg in "$@"
 do
    echo \'$arg\'
