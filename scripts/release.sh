@@ -141,6 +141,7 @@ EOM
     yarn version --patch
     yarn upgrade
     yarn licenses list > DEPENDENCIES
+    yarn pretty
     git checkout -b $BRANCH
     git add -A
     git commit -m $CC
