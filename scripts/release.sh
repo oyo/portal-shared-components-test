@@ -29,7 +29,7 @@ export REPO_OWNER=oyo
 export REPO_NAME=portal-shared-components-test
 
 list-pulls() {
-    curl -L \
+    curl -sL \
         -X GET \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
@@ -37,7 +37,7 @@ list-pulls() {
         https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls
 }
 
-create-pull() {
+create-pull-request() {
     CC=$1
     BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
     DESC=$2
@@ -59,7 +59,7 @@ $ISSUE
 - [x] I have successfully tested my changes locally
 EOM
     BODY=$(echo $RAW_BODY | sed -z 's/\n/\\n/g')
-    curl -L \
+    curl -sL \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer $GITHUB_TOKEN"\
@@ -70,7 +70,7 @@ EOM
 
 next-release() {
     if [[ $# -ne 3 && $# -ne 4 ]]; then
-      cat >&2 << EOM
+        cat >&2 << EOM
 next-release - performs all steps for new release
 
 CAUTION - USE THIS ONLY IF YOU ARE SURE YOU WANT TO:
@@ -95,9 +95,49 @@ example:
 
 EOM
       return -1
-    fi 
+    fi
+
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ "$CURRENT_BRANCH" != "main" ]; then
+        cat >&2 << EOM
+You are on branch
+    $CURRENT_BRANCH
+We recommend you execute this from current
+    main
+branch
+
+Are you sure you want to continue (y/n)? 
+EOM
+        read answer
+        if [ "$answer" = "${answer#[Yy]}" ]; then 
+            return -2
+        fi
+    fi
     CC=$1
     BRANCH=$(echo $CC | awk '{gsub(/[:() ]+/,"-");}1')
+    PR_ARGS=$(for arg in "$@"
+do
+   echo \'$arg\'
+done)
+    ARGS=$(echo $PR_ARGS | sed -z 's/\n/ /g')
+    cat >&2 << EOM
+This will execute:
+
+    yarn version --patch
+    yarn upgrade
+    yarn licenses list > DEPENDENCIES
+    git checkout -b '$BRANCH'
+    git add -A
+    git commit -m '$CC'
+    git push origin '$BRANCH'
+    create-pull-request $ARGS
+
+Are you sure you want to continue (y/n)? 
+EOM
+    read answer
+    if [ "$answer" = "${answer#[Yy]}" ]; then 
+        return -3
+    fi
     yarn version --patch
     yarn upgrade
     yarn licenses list > DEPENDENCIES
@@ -105,8 +145,8 @@ EOM
     git add -A
     git commit -m $CC
     git push origin $BRANCH
-    echo '.'
-    create-pull $@ | jq '.html_url'
+    echo ''
+    create-pull-request $@ | jq '.html_url'
 }
 
 next-release $@
