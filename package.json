@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components-test",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -34,7 +34,8 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
     "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.0",
     "@storybook/addon-actions": "^7.0.17",
     "@storybook/addon-essentials": "^7.0.17",
@@ -43,8 +44,10 @@
     "@storybook/react": "^7.0.17",
     "@storybook/react-webpack5": "^7.0.17",
     "@testing-library/react": "^14.0.0",
+    "@types/autosuggest-highlight": "^3.2.0",
     "@types/jest": "^28.1.6",
     "@types/react": "^18.2.7",
+    "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.0.0",
     "babel-jest": "^27.3.1",
@@ -68,6 +71,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^2.79.1",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-svg": "^2.0.0",
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "storybook": "^7.0.17",
@@ -86,5 +90,14 @@
     "test:ci": "CI=true jest",
     "start": "storybook dev -p 3004",
     "build": "rollup -c"
+  },
+  "dependencies": {
+    "@mui/base": "^5.0.0-beta.3",
+    "@mui/system": "^5.13.2",
+    "@mui/x-data-grid": "^5.17.26",
+    "@mui/x-date-pickers": "^5.0.20",
+    "autosuggest-highlight": "^3.3.4",
+    "date-fns": "^2.30.0",
+    "react-slick": "^0.29.0"
   }
 }

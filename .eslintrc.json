@@ -1,5 +1,5 @@
 {
-  "ignorePatterns": [],
+  "ignorePatterns": ["*.test.tsx", "*.stories.tsx"],
   "env": {
     "browser": true,
     "es2021": true
@@ -37,7 +37,8 @@
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": ["error", "only-multiline"]
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {

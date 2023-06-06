@@ -20,7 +20,9 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
+import image from '@rollup/plugin-image'
 import postcss from 'rollup-plugin-postcss'
+import svg from 'rollup-plugin-svg'
 import cxp from './cxp/index.js'
 import packageJson from './package.json'
 
@@ -44,8 +46,13 @@ export default [
         preferBuiltins: true,
       }),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        exclude: ['**/*.test.tsx, **/*.stories.tsx'],
+      }),
       postcss({}),
+      image(),
+      svg(),
     ],
     external: ['react', 'react-dom', 'styled-components'],
   },
@@ -53,6 +60,13 @@ export default [
     input: 'dist/esm/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.(css|less|scss)$/],
-    plugins: [cxp()],
+    plugins: [
+      resolve({
+        preferBuiltins: true,
+      }),
+      cxp(),
+      image(),
+      svg(),
+    ],
   },
 ]

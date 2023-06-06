@@ -38,7 +38,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/Microsoft/tslib.git
 │  │  ├─ VendorName: Microsoft Corp.
 │  │  └─ VendorUrl: https://www.typescriptlang.org/
-│  └─ tslib@2.5.2
+│  └─ tslib@2.5.3
 │     ├─ URL: https://github.com/Microsoft/tslib.git
 │     ├─ VendorName: Microsoft Corp.
 │     └─ VendorUrl: https://www.typescriptlang.org/
@@ -149,9 +149,9 @@ yarn licenses v1.22.19
 │  ├─ @base2/pretty-print-object@1.0.1
 │  │  ├─ URL: https://github.com/Chris-Baker/pretty-print-object
 │  │  └─ VendorName: Chris Baker
-│  ├─ @typescript-eslint/parser@5.59.8
+│  ├─ @typescript-eslint/parser@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/typescript-estree@5.59.8
+│  ├─ @typescript-eslint/typescript-estree@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
 │  ├─ @yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15
 │  │  └─ URL: ssh://git@github.com/yarnpkg/berry.git
@@ -174,7 +174,7 @@ yarn licenses v1.22.19
 │  ├─ dotenv-expand@10.0.0
 │  │  ├─ URL: https://github.com/motdotla/dotenv-expand
 │  │  └─ VendorName: motdotla
-│  ├─ dotenv@16.1.3
+│  ├─ dotenv@16.1.4
 │  │  └─ URL: git://github.com/motdotla/dotenv.git
 │  ├─ entities@2.2.0
 │  │  ├─ URL: git://github.com/fb55/entities.git
@@ -357,7 +357,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/daaku/nodejs-tmpl
 │  │  ├─ VendorName: Naitik Shah
 │  │  └─ VendorUrl: https://github.com/daaku/nodejs-tmpl
-│  └─ tough-cookie@4.1.2
+│  └─ tough-cookie@4.1.3
 │     ├─ URL: git://github.com/salesforce/tough-cookie.git
 │     ├─ VendorName: Jeremy Stashewsky
 │     └─ VendorUrl: https://github.com/salesforce/tough-cookie
@@ -366,7 +366,7 @@ yarn licenses v1.22.19
 │     ├─ URL: https://github.com/kemitchell/spdx-exceptions.json.git
 │     └─ VendorName: The Linux Foundation
 ├─ CC-BY-4.0
-│  └─ caniuse-lite@1.0.30001492
+│  └─ caniuse-lite@1.0.30001495
 │     ├─ URL: https://github.com/browserslist/caniuse-lite.git
 │     ├─ VendorName: Ben Briggs
 │     └─ VendorUrl: http://beneb.info
@@ -447,7 +447,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/Siilwyn/css-declaration-sorter.git
 │  │  ├─ VendorName: Selwyn
 │  │  └─ VendorUrl: https://selwyn.cc/
-│  ├─ electron-to-chromium@1.4.417
+│  ├─ electron-to-chromium@1.4.421
 │  │  ├─ URL: https://github.com/kilian/electron-to-chromium/
 │  │  └─ VendorName: Kilian Valkhof
 │  ├─ eslint-plugin-promise@6.1.1
@@ -875,7 +875,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/babel/babel.git
 │  │  ├─ VendorName: The Babel Team
 │  │  └─ VendorUrl: https://babel.dev/docs/en/next/babel-plugin-proposal-private-methods
-│  ├─ @babel/plugin-proposal-private-property-in-object@7.21.0
+│  ├─ @babel/plugin-proposal-private-property-in-object@7.21.11
 │  │  ├─ URL: https://github.com/babel/babel.git
 │  │  ├─ VendorName: The Babel Team
 │  │  └─ VendorUrl: https://babel.dev/docs/en/next/babel-plugin-proposal-private-property-in-object
@@ -1224,6 +1224,21 @@ yarn licenses v1.22.19
 │  │  ├─ URL: http://github.com/DABH/colors.js.git
 │  │  ├─ VendorName: DABH
 │  │  └─ VendorUrl: https://github.com/DABH/colors.js
+│  ├─ @date-io/core@2.16.0
+│  │  ├─ URL: https://github.com/dmtrKovalenko/date-io
+│  │  └─ VendorName: Dmitriy Kovalenko
+│  ├─ @date-io/date-fns@2.16.0
+│  │  ├─ URL: https://github.com/dmtrKovalenko/date-io
+│  │  └─ VendorName: Dmitriy Kovalenko
+│  ├─ @date-io/dayjs@2.16.0
+│  │  ├─ URL: https://github.com/dmtrKovalenko/date-io
+│  │  └─ VendorName: Dmitriy Kovalenko
+│  ├─ @date-io/luxon@2.16.1
+│  │  ├─ URL: https://github.com/dmtrKovalenko/date-io
+│  │  └─ VendorName: Dmitriy Kovalenko
+│  ├─ @date-io/moment@2.16.1
+│  │  ├─ URL: https://github.com/dmtrKovalenko/date-io
+│  │  └─ VendorName: Dmitriy Kovalenko
 │  ├─ @discoveryjs/json-ext@0.5.7
 │  │  ├─ URL: https://github.com/discoveryjs/json-ext.git
 │  │  ├─ VendorName: Roman Dvornov
@@ -1271,7 +1286,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/eslint/eslintrc.git
 │  │  ├─ VendorName: Nicholas C. Zakas
 │  │  └─ VendorUrl: https://github.com/eslint/eslintrc#readme
-│  ├─ @eslint/js@8.41.0
+│  ├─ @eslint/js@8.42.0
 │  │  ├─ URL: https://github.com/eslint/eslint.git
 │  │  └─ VendorUrl: https://eslint.org/
 │  ├─ @fal-works/esbuild-plugin-global-externals@2.1.2
@@ -1351,11 +1366,11 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/mdx-js/mdx
 │  │  ├─ VendorName: John Otander
 │  │  └─ VendorUrl: https://mdxjs.com/
-│  ├─ @mui/base@5.0.0-beta.3
+│  ├─ @mui/base@5.0.0-beta.4
 │  │  ├─ URL: https://github.com/mui/material-ui.git
 │  │  ├─ VendorName: MUI Team
 │  │  └─ VendorUrl: https://mui.com/base/getting-started/overview/
-│  ├─ @mui/core-downloads-tracker@5.13.3
+│  ├─ @mui/core-downloads-tracker@5.13.4
 │  │  ├─ URL: https://github.com/mui/material-ui.git
 │  │  ├─ VendorName: MUI Team
 │  │  └─ VendorUrl: https://mui.com/
@@ -1363,7 +1378,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/mui/material-ui.git
 │  │  ├─ VendorName: MUI Team
 │  │  └─ VendorUrl: https://mui.com/material-ui/material-icons/
-│  ├─ @mui/material@5.13.3
+│  ├─ @mui/material@5.13.4
 │  │  ├─ URL: https://github.com/mui/material-ui.git
 │  │  ├─ VendorName: MUI Team
 │  │  └─ VendorUrl: https://mui.com/material-ui/getting-started/overview/
@@ -1387,6 +1402,14 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/mui/material-ui.git
 │  │  ├─ VendorName: MUI Team
 │  │  └─ VendorUrl: https://github.com/mui/material-ui/tree/master/packages/mui-utils
+│  ├─ @mui/x-data-grid@5.17.26
+│  │  ├─ URL: https://github.com/mui/mui-x.git
+│  │  ├─ VendorName: MUI Team
+│  │  └─ VendorUrl: https://mui.com/x/react-data-grid/
+│  ├─ @mui/x-date-pickers@5.0.20
+│  │  ├─ URL: https://github.com/mui/mui-x.git
+│  │  ├─ VendorName: MUI Team
+│  │  └─ VendorUrl: https://mui.com/x/react-date-pickers/getting-started/
 │  ├─ @ndelangen/get-tarball@3.0.9
 │  │  ├─ URL: git+https://github.com/ndelangen/download-tarball.git
 │  │  ├─ VendorName: David Björklund
@@ -1408,7 +1431,11 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/rollup/plugins.git
 │  │  ├─ VendorName: Rich Harris
 │  │  └─ VendorUrl: https://github.com/rollup/plugins/tree/master/packages/commonjs/#readme
-│  ├─ @rollup/plugin-node-resolve@13.3.0
+│  ├─ @rollup/plugin-image@3.0.2
+│  │  ├─ URL: https://github.com/rollup/plugins.git
+│  │  ├─ VendorName: Rich Harris
+│  │  └─ VendorUrl: https://github.com/rollup/plugins/tree/master/packages/image/#readme
+│  ├─ @rollup/plugin-node-resolve@15.1.0
 │  │  ├─ URL: https://github.com/rollup/plugins.git
 │  │  ├─ VendorName: Rich Harris
 │  │  └─ VendorUrl: https://github.com/rollup/plugins/tree/master/packages/node-resolve/#readme
@@ -1610,6 +1637,9 @@ yarn licenses v1.22.19
 │  ├─ @types/aria-query@5.0.1
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/aria-query
+│  ├─ @types/autosuggest-highlight@3.2.0
+│  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+│  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/autosuggest-highlight
 │  ├─ @types/babel__core@7.20.1
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/babel__core
@@ -1747,14 +1777,18 @@ yarn licenses v1.22.19
 │  ├─ @types/react-is@18.2.0
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-is
+│  ├─ @types/react-slick@0.23.10
+│  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+│  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-slick
 │  ├─ @types/react-transition-group@4.4.6
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-transition-group
 │  ├─ @types/react@18.2.8
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react
-│  ├─ @types/resolve@1.17.1
-│  │  └─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+│  ├─ @types/resolve@1.20.2
+│  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+│  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/resolve
 │  ├─ @types/scheduler@0.16.3
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/scheduler
@@ -1785,17 +1819,17 @@ yarn licenses v1.22.19
 │  ├─ @types/yargs@17.0.24
 │  │  ├─ URL: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 │  │  └─ VendorUrl: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/yargs
-│  ├─ @typescript-eslint/eslint-plugin@5.59.8
+│  ├─ @typescript-eslint/eslint-plugin@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/scope-manager@5.59.8
+│  ├─ @typescript-eslint/scope-manager@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/type-utils@5.59.8
+│  ├─ @typescript-eslint/type-utils@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/types@5.59.8
+│  ├─ @typescript-eslint/types@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/utils@5.59.8
+│  ├─ @typescript-eslint/utils@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
-│  ├─ @typescript-eslint/visitor-keys@5.59.8
+│  ├─ @typescript-eslint/visitor-keys@5.59.9
 │  │  └─ URL: https://github.com/typescript-eslint/typescript-eslint.git
 │  ├─ @webassemblyjs/ast@1.11.6
 │  │  ├─ URL: https://github.com/xtuc/webassemblyjs.git
@@ -1988,6 +2022,9 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/alexindigo/asynckit.git
 │  │  ├─ VendorName: Alex Indigo
 │  │  └─ VendorUrl: https://github.com/alexindigo/asynckit#readme
+│  ├─ autosuggest-highlight@3.3.4
+│  │  ├─ URL: https://github.com/moroshko/autosuggest-highlight.git
+│  │  └─ VendorName: Misha Moroshko
 │  ├─ available-typed-arrays@1.0.5
 │  │  ├─ URL: git+https://github.com/inspect-js/available-typed-arrays.git
 │  │  ├─ VendorName: Jordan Harband
@@ -2169,6 +2206,9 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/guybedford/cjs-module-lexer.git
 │  │  ├─ VendorName: Guy Bedford
 │  │  └─ VendorUrl: https://github.com/guybedford/cjs-module-lexer#readme
+│  ├─ classnames@2.3.2
+│  │  ├─ URL: https://github.com/JedWatson/classnames.git
+│  │  └─ VendorName: Jed Watson
 │  ├─ clean-css@5.3.2
 │  │  ├─ URL: https://github.com/clean-css/clean-css.git
 │  │  ├─ VendorName: Jakub Pawlowicz
@@ -2358,6 +2398,8 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/jsdom/data-urls.git
 │  │  ├─ VendorName: Domenic Denicola
 │  │  └─ VendorUrl: https://domenic.me/
+│  ├─ date-fns@2.30.0
+│  │  └─ URL: https://github.com/date-fns/date-fns
 │  ├─ debug@2.6.9
 │  │  ├─ URL: git://github.com/visionmedia/debug.git
 │  │  └─ VendorName: TJ Holowaychuk
@@ -2503,6 +2545,10 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git://github.com/webpack/enhanced-resolve.git
 │  │  ├─ VendorName: Tobias Koppers @sokra
 │  │  └─ VendorUrl: http://github.com/webpack/enhanced-resolve
+│  ├─ enquire.js@2.1.6
+│  │  ├─ URL: git://github.com/WickyNilliams/enquire.js.git
+│  │  ├─ VendorName: Nick Williams
+│  │  └─ VendorUrl: http://wicky.nillia.ms/enquire.js
 │  ├─ envinfo@7.8.1
 │  │  ├─ URL: https://github.com/tabrindle/envinfo
 │  │  └─ VendorName: tabrindle@gmail.com
@@ -2603,7 +2649,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/mysticatea/eslint-utils.git
 │  │  ├─ VendorName: Toru Nagashima
 │  │  └─ VendorUrl: https://github.com/mysticatea/eslint-utils#readme
-│  ├─ eslint@8.41.0
+│  ├─ eslint@8.42.0
 │  │  ├─ URL: https://github.com/eslint/eslint.git
 │  │  ├─ VendorName: Nicholas C. Zakas
 │  │  └─ VendorUrl: https://eslint.org/
@@ -2611,6 +2657,8 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git://github.com/coderaiser/estree-to-babel.git
 │  │  ├─ VendorName: coderaiser
 │  │  └─ VendorUrl: http://github.com/coderaiser/estree-to-babel
+│  ├─ estree-walker@0.2.1
+│  │  └─ VendorName: Rich Harris
 │  ├─ estree-walker@0.6.1
 │  │  ├─ URL: https://github.com/Rich-Harris/estree-walker
 │  │  └─ VendorName: Rich Harris
@@ -2879,7 +2927,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/jsdom/html-encoding-sniffer.git
 │  │  ├─ VendorName: Domenic Denicola
 │  │  └─ VendorUrl: https://domenic.me/
-│  ├─ html-entities@2.3.3
+│  ├─ html-entities@2.3.5
 │  │  ├─ URL: https://github.com/mdevils/html-entities.git
 │  │  └─ VendorName: Marat Dulin
 │  ├─ html-escaper@2.0.2
@@ -3296,6 +3344,10 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git://github.com/samn/json-stable-stringify.git
 │  │  ├─ VendorName: James Halliday
 │  │  └─ VendorUrl: https://github.com/samn/json-stable-stringify
+│  ├─ json2mq@0.2.0
+│  │  ├─ URL: https://github.com/akiran/json2mq
+│  │  ├─ VendorName: Kiran Abburi
+│  │  └─ VendorUrl: https://github.com/akiran/json2mq
 │  ├─ json5@1.0.2
 │  │  ├─ URL: git+https://github.com/json5/json5.git
 │  │  ├─ VendorName: Aseem Kishore
@@ -3429,7 +3481,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/thinkloop/map-or-similar.git
 │  │  ├─ VendorName: Baz
 │  │  └─ VendorUrl: https://github.com/thinkloop/map-or-similar#readme
-│  ├─ markdown-to-jsx@7.2.0
+│  ├─ markdown-to-jsx@7.2.1
 │  │  ├─ URL: https://github.com/probablyup/markdown-to-jsx.git
 │  │  ├─ VendorName: Evan Jacobs
 │  │  └─ VendorUrl: https://probablyup.github.io/markdown-to-jsx
@@ -3488,6 +3540,10 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/thejameskyle/min-indent
 │  │  ├─ VendorName: James Kyle
 │  │  └─ VendorUrl: thejameskyle.com
+│  ├─ mini-svg-data-uri@1.4.4
+│  │  ├─ URL: git+https://github.com/tigt/mini-svg-data-uri.git
+│  │  ├─ VendorName: Taylor “Tigt” Hunt
+│  │  └─ VendorUrl: https://github.com/tigt/mini-svg-data-uri#readme
 │  ├─ minimist@1.2.8
 │  │  ├─ URL: git://github.com/minimistjs/minimist.git
 │  │  ├─ VendorName: James Halliday
@@ -4048,6 +4104,10 @@ yarn licenses v1.22.19
 │  ├─ react-refresh@0.11.0
 │  │  ├─ URL: https://github.com/facebook/react.git
 │  │  └─ VendorUrl: https://reactjs.org/
+│  ├─ react-slick@0.29.0
+│  │  ├─ URL: https://github.com/akiran/react-slick
+│  │  ├─ VendorName: Kiran Abburi
+│  │  └─ VendorUrl: https://react-slick.neostack.com/
 │  ├─ react@18.2.0
 │  │  ├─ URL: https://github.com/facebook/react.git
 │  │  └─ VendorUrl: https://reactjs.org/
@@ -4115,6 +4175,10 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/remarkjs/remark-slug.git
 │  │  ├─ VendorName: Titus Wormer
 │  │  └─ VendorUrl: https://wooorm.com
+│  ├─ remove-accents@0.4.4
+│  │  ├─ URL: https://github.com/tyxla/remove-accents
+│  │  ├─ VendorName: Marin Atanasov
+│  │  └─ VendorUrl: https://github.com/tyxla/remove-accents
 │  ├─ renderkid@3.0.0
 │  │  ├─ URL: https://github.com/AriaMinaei/RenderKid.git
 │  │  └─ VendorName: Aria Minaei
@@ -4130,6 +4194,12 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/unshiftio/requires-port
 │  │  ├─ VendorName: Arnout Kazemier
 │  │  └─ VendorUrl: https://github.com/unshiftio/requires-port
+│  ├─ reselect@4.1.8
+│  │  └─ URL: https://github.com/reduxjs/reselect.git
+│  ├─ resize-observer-polyfill@1.5.1
+│  │  ├─ URL: https://github.com/que-etc/resize-observer-polyfill.git
+│  │  ├─ VendorName: Denis Rul
+│  │  └─ VendorUrl: https://github.com/que-etc/resize-observer-polyfill
 │  ├─ resolve-cwd@3.0.0
 │  │  ├─ URL: https://github.com/sindresorhus/resolve-cwd.git
 │  │  ├─ VendorName: Sindre Sorhus
@@ -4166,10 +4236,21 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/davidmarkclements/rfdc.git
 │  │  ├─ VendorName: David Mark Clements
 │  │  └─ VendorUrl: https://github.com/davidmarkclements/rfdc#readme
+│  ├─ rifm@0.12.1
+│  │  ├─ URL: https://github.com/istarkov/rifm.git
+│  │  └─ VendorName: istarkov
 │  ├─ rollup-plugin-postcss@4.0.2
 │  │  ├─ URL: git+https://github.com/egoist/rollup-plugin-postcss.git
 │  │  ├─ VendorName: EGOIST
 │  │  └─ VendorUrl: https://github.com/egoist/rollup-plugin-postcss#readme
+│  ├─ rollup-plugin-svg@2.0.0
+│  │  ├─ URL: git+https://github.com/antony/rollup-plugin-svg.git
+│  │  ├─ VendorName: Antony Jones
+│  │  └─ VendorUrl: https://github.com/antony/rollup-plugin-svg#readme
+│  ├─ rollup-pluginutils@1.5.2
+│  │  ├─ URL: git+https://github.com/rollup/rollup-pluginutils.git
+│  │  ├─ VendorName: Rich Harris
+│  │  └─ VendorUrl: https://github.com/rollup/rollup-pluginutils#readme
 │  ├─ rollup-pluginutils@2.8.2
 │  │  ├─ URL: https://github.com/rollup/rollup-pluginutils.git
 │  │  ├─ VendorName: Rich Harris
@@ -4317,6 +4398,8 @@ yarn licenses v1.22.19
 │  │  ├─ URL: https://github.com/mccormicka/string-argv
 │  │  ├─ VendorName: Anthony McCormick
 │  │  └─ VendorUrl: https://github.com/mccormicka/string-argv
+│  ├─ string-convert@0.2.1
+│  │  └─ URL: https://github.com/akiran/string-convert
 │  ├─ string-length@4.0.2
 │  │  ├─ URL: https://github.com/sindresorhus/string-length.git
 │  │  ├─ VendorName: Sindre Sorhus
@@ -4628,7 +4711,7 @@ yarn licenses v1.22.19
 │  │  ├─ URL: git+https://github.com/sysgears/webpack-virtual-modules.git
 │  │  ├─ VendorName: SysGears INC
 │  │  └─ VendorUrl: https://github.com/sysgears/webpack-virtual-modules#readme
-│  ├─ webpack@5.85.0
+│  ├─ webpack@5.85.1
 │  │  ├─ URL: https://github.com/webpack/webpack.git
 │  │  ├─ VendorName: Tobias Koppers @sokra
 │  │  └─ VendorUrl: https://github.com/webpack/webpack
@@ -4716,6 +4799,6 @@ yarn licenses v1.22.19
    │  └─ VendorName: Peter Olson
    ├─ fs-monkey@1.0.4
    │  └─ URL: https://github.com/streamich/fs-monkey.git
-   └─ memfs@3.5.1
+   └─ memfs@3.5.2
       └─ URL: https://github.com/streamich/memfs.git
-Done in 0.47s.
+Done in 0.51s.
