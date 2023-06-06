@@ -8,7 +8,8 @@
     "standard-with-typescript",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint"],
@@ -32,14 +33,12 @@
     "sourceType": "module"
   },
   "rules": {
-    "indent": "off",
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "comma-dangle": "off",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
-    "@typescript-eslint/indent": "off"
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"]
   },
   "settings": {
     "react": {
