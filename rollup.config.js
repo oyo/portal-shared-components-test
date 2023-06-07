@@ -22,6 +22,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import image from '@rollup/plugin-image'
 import postcss from 'rollup-plugin-postcss'
+import css from 'rollup-plugin-import-css'
 import svg from 'rollup-plugin-svg'
 import cxp from './cxp/index.js'
 import packageJson from './package.json'
@@ -51,6 +52,7 @@ export default [
         exclude: ['**/*.test.tsx, **/*.stories.tsx'],
       }),
       postcss({}),
+      css(),
       image(),
       svg(),
     ],
@@ -64,6 +66,7 @@ export default [
       resolve({
         preferBuiltins: true,
       }),
+      css(),
       cxp(),
       image(),
       svg(),

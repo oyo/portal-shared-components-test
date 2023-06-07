@@ -36,8 +36,8 @@ const Template: ComponentStory<typeof Component> = (args: any) => (
   <Component {...args} />
 )
 
-export const Input = Template.bind({})
-Input.args = {
+export const Textarea = Template.bind({})
+Textarea.args = {
   label: 'Label',
   placeholder: 'Placeholder',
   helperText: 'Helper',
