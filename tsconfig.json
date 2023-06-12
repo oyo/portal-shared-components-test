@@ -24,5 +24,12 @@
     "types": ["node", "jest"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build", "dist", "storybook-static"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "storybook-static",
+    "**/*.test.tsx",
+    "**/*.stories.tsx"
+  ]
 }
