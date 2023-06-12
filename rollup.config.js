@@ -60,7 +60,7 @@ export default [
   },
   {
     input: 'dist/esm/types/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    output: [{ file: 'dist/index.d.ts', format: 'esm', sourcemap: true }],
     external: [/\.(css|less|scss)$/],
     plugins: [
       resolve({

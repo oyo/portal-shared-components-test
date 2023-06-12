@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components-test",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -71,6 +71,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^2.79.1",
+    "rollup-plugin-import-css": "^3.2.1",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "sass": "^1.43.5",
@@ -89,7 +90,6 @@
     "date-fns": "^2.30.0",
     "jquery": "^3.7.0",
     "react-slick": "^0.29.0",
-    "rollup-plugin-import-css": "^3.2.1",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
