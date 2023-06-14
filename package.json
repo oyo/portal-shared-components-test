@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components-test",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -25,6 +25,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-syntax-flow": "^7.22.5",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
@@ -38,8 +41,11 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-typescript": "^11.1.0",
     "@storybook/addon-actions": "^7.0.18",
+    "@storybook/addon-docs": "^7.0.20",
     "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.20",
     "@storybook/addon-links": "^7.0.18",
+    "@storybook/preset-create-react-app": "^7.0.20",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
@@ -60,6 +66,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.12",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
@@ -70,6 +77,8 @@
     "prettier": "2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-refresh": "^0.14.0",
+    "react-scripts": "^5.0.1",
     "rollup": "^2.79.1",
     "rollup-plugin-import-css": "^3.2.1",
     "rollup-plugin-postcss": "^4.0.2",
@@ -95,13 +104,13 @@
   "scripts": {
     "build:lib": "echo DEPRECATED - use \"yarn build\" && yarn build",
     "start:storybook": "echo DEPRECATED - use \"yarn start\" && yarn start",
-    "build:storybook": "storybook build",
+    "build:storybook": "DISABLE_ESLINT_PLUGIN=true storybook build --output-dir=storybook/",
     "build:sources": "zip -r portal-shared-components.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.css' -x '*.scss' -x '*.svg' -x '*.jpg' -x '*.png' -x '*.ttf'",
-    "pretty": "prettier --write \"./src/**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\" \"./*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
+    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "lint": "yarn run eslint \"./src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:ci": "CI=true jest",
-    "start": "storybook dev -p 3006",
+    "start": "DISABLE_ESLINT_PLUGIN=true storybook dev -p 3006 --preview-url=http://localhost:3006/storybook/",
     "build": "rollup -c"
   }
 }
