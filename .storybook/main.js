@@ -26,17 +26,28 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/preset-create-react-app',
     {
-      name: "@storybook/addon-docs",
+      name: '@storybook/addon-docs',
       options: {
         configureJSX: true,
       },
     },
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
   features: {
     emotionAlias: false,
+  },
+  docs: {
+    autodocs: true,
+  },
+  webpackFinal: async (config) => {
+    config.output.publicPath = '/storybook/'
+    return config
+  },
+  managerWebpack: async (config) => {
+    config.output.publicPath = '/storybook/'
+    return config
   },
 }
