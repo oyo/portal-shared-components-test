@@ -143,6 +143,7 @@ export const MultiSelectList = ({
             selectedItems.map((option: any, index: number) => (
               <Chip
                 {...getTagProps({ index })}
+                key={option[keyTitle]}
                 variant="filled"
                 label={option[keyTitle]}
                 sx={{

@@ -1,6 +1,6 @@
 {
   "name": "@catena-x/portal-shared-components-test",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Catena-X Portal Shared Components",
   "author": "Catena-X Contributors",
   "license": "Apache-2.0",
@@ -60,6 +60,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
@@ -93,14 +94,11 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "build:lib": "echo DEPRECATED - use \"yarn build\" && yarn build",
-    "start:storybook": "echo DEPRECATED - use \"yarn start\" && yarn start",
     "build:storybook": "storybook build",
     "build:sources": "zip -r portal-shared-components.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.css' -x '*.scss' -x '*.svg' -x '*.jpg' -x '*.png' -x '*.ttf'",
-    "pretty": "prettier --write \"./src/**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\" \"./*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
+    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,sass,scss,xml,md}\"",
     "lint": "yarn run eslint \"./src/**/*.{ts,tsx}\"",
     "test": "jest",
-    "test:ci": "CI=true jest",
     "start": "storybook dev -p 3006",
     "build": "rollup -c"
   }

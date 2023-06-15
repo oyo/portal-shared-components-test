@@ -75,15 +75,11 @@ export const Input = ({
               }}
               tooltipPlacement="top-start"
               tooltipText={tooltipMessage}
-              children={
-                <span>
-                  <HelpOutlineIcon
-                    sx={{ color: '#B6B6B6' }}
-                    fontSize={'small'}
-                  />
-                </span>
-              }
-            />
+            >
+              <span>
+                <HelpOutlineIcon sx={{ color: '#B6B6B6' }} fontSize={'small'} />
+              </span>
+            </Tooltips>
           )}
         </Box>
         <TextField

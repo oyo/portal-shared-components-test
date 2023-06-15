@@ -55,10 +55,10 @@ jobs:
         run: yarn
 
       - name: Linter Checks
-        run: echo yarn lint
+        run: yarn lint
 
       - name: Unit Tests
-        run: echo yarn test:ci
+        run: CI=true yarn test
 
       - name: Build Library
         run: yarn build

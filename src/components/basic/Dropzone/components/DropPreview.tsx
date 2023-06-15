@@ -79,6 +79,9 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
   const DefaultDropStatusHeader: typeof DropStatusHeader = ({
     numUploaded,
     numTotal,
+  }: {
+    numUploaded: number
+    numTotal: number
   }) => {
     const uploadProgress = translations.uploadProgess
       .replace('%', numUploaded.toString())
@@ -95,14 +98,18 @@ export const DropPreview: FunctionComponent<DropPreviewProps> = ({
   if (DropStatusHeader) {
     DropStatusHeaderComponent = DropStatusHeader
   } else if (DropStatusHeader === false) {
-    DropStatusHeaderComponent = () => null
+    DropStatusHeaderComponent = function empty() {
+      return null
+    }
   }
 
   let DropPreviewFileComponent = DefaultDropPreviewFile
   if (DropPreviewFile) {
     DropPreviewFileComponent = DropPreviewFile
   } else if (DropPreviewFile === false) {
-    DropPreviewFileComponent = () => null
+    DropPreviewFileComponent = function empty() {
+      return null
+    }
   }
 
   const onCallback = (closeOverlay: boolean) => {

@@ -66,8 +66,8 @@ export const ImageItem = ({
         }
       case 'custom':
         return {
-          width: width,
-          height: height,
+          width,
+          height,
         }
       default:
         return {
